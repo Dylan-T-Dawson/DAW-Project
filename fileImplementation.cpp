@@ -24,7 +24,7 @@ int main(){
     string Pname;
     string Tname;
     while(command != "exit"){
-        cout << "Type either mkP, addT, rmP, rmT, or exit" << endl;
+        cout << "Type either mkP, addT, rmP, delT, or exit" << endl;
         cin >> command;
         if(command == "mkP"){
             cout << "Enter the name of the new project" << endl;
