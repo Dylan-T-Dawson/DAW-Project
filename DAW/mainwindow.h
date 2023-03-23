@@ -6,6 +6,7 @@
 #include "QLRClickButton.h"
 #include <vector>
 #include <memory>
+#include "TrackGUI.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,12 +23,13 @@ public:
 
 private slots:
 
+    void addTrack();
 
     static void quit();
 
 private:
     Ui::MainWindow* ui;
-
+    int numTracks;
 };
 
 #endif // MAINWINDOW_H

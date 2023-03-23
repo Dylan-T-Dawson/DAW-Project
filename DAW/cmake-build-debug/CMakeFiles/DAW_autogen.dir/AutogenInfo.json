@@ -256,6 +256,12 @@
 			null
 		],
 		[
+			"C:/Users/dtda230/Desktop/DAW/TrackGUI.h",
+			"MU",
+			"EWIEGA46WW/moc_TrackGUI.cpp",
+			null
+		],
+		[
 			"C:/Users/dtda230/Desktop/DAW/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -334,6 +340,7 @@
 	"SOURCES" : 
 	[
 		[ "C:/Users/dtda230/Desktop/DAW/QLRClickButton.cpp", "MU", null ],
+		[ "C:/Users/dtda230/Desktop/DAW/TrackGUI.cpp", "MU", null ],
 		[ "C:/Users/dtda230/Desktop/DAW/main.cpp", "MU", null ],
 		[ "C:/Users/dtda230/Desktop/DAW/mainwindow.cpp", "MU", null ]
 	],

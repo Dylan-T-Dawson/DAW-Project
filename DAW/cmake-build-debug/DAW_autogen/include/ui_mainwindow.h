@@ -12,13 +12,10 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFormLayout>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QSlider>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -46,27 +43,6 @@ public:
     QLabel *label;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout_7;
-    QFormLayout *trackHandle_7;
-    QLabel *label_13;
-    QPushButton *muteButton_7;
-    QSlider *horizontalSlider_8;
-    QPushButton *deleteButton_8;
-    QGraphicsView *graphicsView_5;
-    QHBoxLayout *horizontalLayout_6;
-    QFormLayout *trackHandle_6;
-    QLabel *label_12;
-    QPushButton *muteButton_6;
-    QSlider *horizontalSlider_7;
-    QPushButton *deleteButton_7;
-    QGraphicsView *graphicsView_4;
-    QHBoxLayout *horizontalLayout_5;
-    QFormLayout *trackHandle_5;
-    QLabel *label_11;
-    QPushButton *muteButton_5;
-    QSlider *horizontalSlider_6;
-    QPushButton *deleteButton_6;
-    QGraphicsView *graphicsView_3;
     QPushButton *addTrack;
     QSpacerItem *verticalSpacer;
     QWidget *horizontalLayoutWidget_2;
@@ -194,158 +170,11 @@ public:
         verticalLayout->setSpacing(25);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 14, 0, 0);
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setSpacing(15);
-        horizontalLayout_7->setObjectName("horizontalLayout_7");
-        horizontalLayout_7->setContentsMargins(-1, 2, 0, 2);
-        trackHandle_7 = new QFormLayout();
-        trackHandle_7->setObjectName("trackHandle_7");
-        trackHandle_7->setSizeConstraint(QLayout::SetDefaultConstraint);
-        trackHandle_7->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
-        trackHandle_7->setLabelAlignment(Qt::AlignCenter);
-        trackHandle_7->setFormAlignment(Qt::AlignHCenter|Qt::AlignTop);
-        label_13 = new QLabel(verticalLayoutWidget);
-        label_13->setObjectName("label_13");
-
-        trackHandle_7->setWidget(0, QFormLayout::LabelRole, label_13);
-
-        muteButton_7 = new QPushButton(verticalLayoutWidget);
-        muteButton_7->setObjectName("muteButton_7");
-
-        trackHandle_7->setWidget(0, QFormLayout::FieldRole, muteButton_7);
-
-        horizontalSlider_8 = new QSlider(verticalLayoutWidget);
-        horizontalSlider_8->setObjectName("horizontalSlider_8");
+        addTrack = new QPushButton(verticalLayoutWidget);
+        addTrack->setObjectName("addTrack");
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(horizontalSlider_8->sizePolicy().hasHeightForWidth());
-        horizontalSlider_8->setSizePolicy(sizePolicy2);
-        horizontalSlider_8->setMinimumSize(QSize(175, 20));
-        horizontalSlider_8->setOrientation(Qt::Horizontal);
-
-        trackHandle_7->setWidget(1, QFormLayout::LabelRole, horizontalSlider_8);
-
-        deleteButton_8 = new QPushButton(verticalLayoutWidget);
-        deleteButton_8->setObjectName("deleteButton_8");
-
-        trackHandle_7->setWidget(1, QFormLayout::FieldRole, deleteButton_8);
-
-
-        horizontalLayout_7->addLayout(trackHandle_7);
-
-        graphicsView_5 = new QGraphicsView(verticalLayoutWidget);
-        graphicsView_5->setObjectName("graphicsView_5");
-        sizePolicy.setHeightForWidth(graphicsView_5->sizePolicy().hasHeightForWidth());
-        graphicsView_5->setSizePolicy(sizePolicy);
-        graphicsView_5->setMinimumSize(QSize(1109, 67));
-        graphicsView_5->setMaximumSize(QSize(1109, 67));
-
-        horizontalLayout_7->addWidget(graphicsView_5);
-
-
-        verticalLayout->addLayout(horizontalLayout_7);
-
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setSpacing(15);
-        horizontalLayout_6->setObjectName("horizontalLayout_6");
-        horizontalLayout_6->setContentsMargins(-1, 2, 0, 2);
-        trackHandle_6 = new QFormLayout();
-        trackHandle_6->setObjectName("trackHandle_6");
-        trackHandle_6->setSizeConstraint(QLayout::SetDefaultConstraint);
-        trackHandle_6->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
-        trackHandle_6->setLabelAlignment(Qt::AlignCenter);
-        trackHandle_6->setFormAlignment(Qt::AlignHCenter|Qt::AlignTop);
-        label_12 = new QLabel(verticalLayoutWidget);
-        label_12->setObjectName("label_12");
-
-        trackHandle_6->setWidget(0, QFormLayout::LabelRole, label_12);
-
-        muteButton_6 = new QPushButton(verticalLayoutWidget);
-        muteButton_6->setObjectName("muteButton_6");
-
-        trackHandle_6->setWidget(0, QFormLayout::FieldRole, muteButton_6);
-
-        horizontalSlider_7 = new QSlider(verticalLayoutWidget);
-        horizontalSlider_7->setObjectName("horizontalSlider_7");
-        sizePolicy2.setHeightForWidth(horizontalSlider_7->sizePolicy().hasHeightForWidth());
-        horizontalSlider_7->setSizePolicy(sizePolicy2);
-        horizontalSlider_7->setMinimumSize(QSize(175, 20));
-        horizontalSlider_7->setOrientation(Qt::Horizontal);
-
-        trackHandle_6->setWidget(1, QFormLayout::LabelRole, horizontalSlider_7);
-
-        deleteButton_7 = new QPushButton(verticalLayoutWidget);
-        deleteButton_7->setObjectName("deleteButton_7");
-
-        trackHandle_6->setWidget(1, QFormLayout::FieldRole, deleteButton_7);
-
-
-        horizontalLayout_6->addLayout(trackHandle_6);
-
-        graphicsView_4 = new QGraphicsView(verticalLayoutWidget);
-        graphicsView_4->setObjectName("graphicsView_4");
-        sizePolicy.setHeightForWidth(graphicsView_4->sizePolicy().hasHeightForWidth());
-        graphicsView_4->setSizePolicy(sizePolicy);
-        graphicsView_4->setMinimumSize(QSize(1109, 67));
-        graphicsView_4->setMaximumSize(QSize(1109, 67));
-
-        horizontalLayout_6->addWidget(graphicsView_4);
-
-
-        verticalLayout->addLayout(horizontalLayout_6);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(15);
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        horizontalLayout_5->setContentsMargins(-1, 2, 0, 2);
-        trackHandle_5 = new QFormLayout();
-        trackHandle_5->setObjectName("trackHandle_5");
-        trackHandle_5->setSizeConstraint(QLayout::SetDefaultConstraint);
-        trackHandle_5->setFieldGrowthPolicy(QFormLayout::FieldsStayAtSizeHint);
-        trackHandle_5->setLabelAlignment(Qt::AlignCenter);
-        trackHandle_5->setFormAlignment(Qt::AlignHCenter|Qt::AlignTop);
-        label_11 = new QLabel(verticalLayoutWidget);
-        label_11->setObjectName("label_11");
-
-        trackHandle_5->setWidget(0, QFormLayout::LabelRole, label_11);
-
-        muteButton_5 = new QPushButton(verticalLayoutWidget);
-        muteButton_5->setObjectName("muteButton_5");
-
-        trackHandle_5->setWidget(0, QFormLayout::FieldRole, muteButton_5);
-
-        horizontalSlider_6 = new QSlider(verticalLayoutWidget);
-        horizontalSlider_6->setObjectName("horizontalSlider_6");
-        sizePolicy2.setHeightForWidth(horizontalSlider_6->sizePolicy().hasHeightForWidth());
-        horizontalSlider_6->setSizePolicy(sizePolicy2);
-        horizontalSlider_6->setMinimumSize(QSize(175, 20));
-        horizontalSlider_6->setOrientation(Qt::Horizontal);
-
-        trackHandle_5->setWidget(1, QFormLayout::LabelRole, horizontalSlider_6);
-
-        deleteButton_6 = new QPushButton(verticalLayoutWidget);
-        deleteButton_6->setObjectName("deleteButton_6");
-
-        trackHandle_5->setWidget(1, QFormLayout::FieldRole, deleteButton_6);
-
-
-        horizontalLayout_5->addLayout(trackHandle_5);
-
-        graphicsView_3 = new QGraphicsView(verticalLayoutWidget);
-        graphicsView_3->setObjectName("graphicsView_3");
-        sizePolicy.setHeightForWidth(graphicsView_3->sizePolicy().hasHeightForWidth());
-        graphicsView_3->setSizePolicy(sizePolicy);
-        graphicsView_3->setMinimumSize(QSize(1109, 67));
-        graphicsView_3->setMaximumSize(QSize(1109, 67));
-
-        horizontalLayout_5->addWidget(graphicsView_3);
-
-
-        verticalLayout->addLayout(horizontalLayout_5);
-
-        addTrack = new QPushButton(verticalLayoutWidget);
-        addTrack->setObjectName("addTrack");
         sizePolicy2.setHeightForWidth(addTrack->sizePolicy().hasHeightForWidth());
         addTrack->setSizePolicy(sizePolicy2);
         addTrack->setMinimumSize(QSize(40, 30));
@@ -432,15 +261,6 @@ public:
         copyPasteButton->setText(QCoreApplication::translate("MainWindow", "Copy Selected", nullptr));
         deleteButton->setText(QCoreApplication::translate("MainWindow", "Delete Selected", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Project: Project1", nullptr));
-        label_13->setText(QCoreApplication::translate("MainWindow", "Track 1", nullptr));
-        muteButton_7->setText(QCoreApplication::translate("MainWindow", "Mute", nullptr));
-        deleteButton_8->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "Track 2", nullptr));
-        muteButton_6->setText(QCoreApplication::translate("MainWindow", "Mute", nullptr));
-        deleteButton_7->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
-        label_11->setText(QCoreApplication::translate("MainWindow", "Track 3", nullptr));
-        muteButton_5->setText(QCoreApplication::translate("MainWindow", "Mute", nullptr));
-        deleteButton_6->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         addTrack->setText(QCoreApplication::translate("MainWindow", "Add Track", nullptr));
         label_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "30", nullptr));

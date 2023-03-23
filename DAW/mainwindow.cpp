@@ -11,15 +11,23 @@
 MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(parent), ui(new Ui::MainWindow) {
             ui->setupUi(this);
-
+            numTracks = 0;
+            addTrack();
 
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
+void MainWindow::addTrack(){
 
-//Closes the application when the Quit button is clicked.
+    for(int i = 0; i < 5; i++) {
+        TrackGUI *addT = new TrackGUI("Track " + QString::number(i), i);
+        ui->verticalLayout->insertLayout(i, addT->track);
+    }
+
+}
+
 void MainWindow::quit() {
     QApplication::quit();
 }

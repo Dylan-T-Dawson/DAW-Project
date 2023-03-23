@@ -19,7 +19,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 add_executable(DAW main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
-        minesweeper.qrc QLRClickButton.h QLRClickButton.cpp)
+        minesweeper.qrc QLRClickButton.h QLRClickButton.cpp TrackGUI.h TrackGUI.cpp)
 target_link_libraries(DAW PRIVATE
         Qt::Core
         Qt::Gui

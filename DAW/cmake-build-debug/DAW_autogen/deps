@@ -277,9 +277,12 @@ DAW_autogen/timestamp: \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qcontainerinfo.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qcontainertools_impl.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qcontiguouscache.h \
+	C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreapplication.h \
+	C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreevent.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qdatastream.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qdebug.h \
+	C:/Qt/6.4.2/mingw_64/include/QtCore/qeventloop.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qflags.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qforeach.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qgenericatomic.h \
@@ -293,6 +296,7 @@ DAW_autogen/timestamp: \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qiterator.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qline.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qlist.h \
+	C:/Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qlogging.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qmap.h \
 	C:/Qt/6.4.2/mingw_64/include/QtCore/qmargins.h \
@@ -355,12 +359,18 @@ DAW_autogen/timestamp: \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qfont.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qfontinfo.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qfontmetrics.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qicon.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qimage.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qinputdevice.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qkeysequence.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qpaintdevice.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qpainter.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qpalette.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qpen.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qpixelformat.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qpixmap.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -369,6 +379,8 @@ DAW_autogen/timestamp: \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qrgb.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qrgba64.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qscreen.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
+	C:/Qt/6.4.2/mingw_64/include/QtGui/qtextoption.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qtgui-config.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiexports.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiglobal.h \
@@ -377,12 +389,33 @@ DAW_autogen/timestamp: \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qvectornd.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs.h \
 	C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QApplication \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QFormLayout \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QGraphicsView \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QHBoxLayout \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLabel \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLayout \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QPushButton \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/QSlider \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractslider.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qapplication.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qboxlayout.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qformlayout.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgridlayout.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlabel.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayout.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayoutitem.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmainwindow.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qpushbutton.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qscrollarea.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qsizepolicy.h \
+	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qslider.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtabwidget.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -548,6 +581,8 @@ DAW_autogen/timestamp: \
 	C:/Users/dtda230/Desktop/DAW/CMakeLists.txt \
 	C:/Users/dtda230/Desktop/DAW/QLRClickButton.cpp \
 	C:/Users/dtda230/Desktop/DAW/QLRClickButton.h \
+	C:/Users/dtda230/Desktop/DAW/TrackGUI.cpp \
+	C:/Users/dtda230/Desktop/DAW/TrackGUI.h \
 	C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/3.24.2/CMakeCCompiler.cmake \
 	C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
 	C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/3.24.2/CMakeRCCompiler.cmake \
