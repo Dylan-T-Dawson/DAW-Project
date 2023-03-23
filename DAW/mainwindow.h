@@ -8,6 +8,7 @@
 #include <memory>
 #include "TrackGUI.h"
 
+#define maxTrack 8
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,12 +25,14 @@ public:
 private slots:
 
     void addTrack();
-
+    void removeTrack();
+    void sync();
     static void quit();
 
 private:
     Ui::MainWindow* ui;
     int numTracks;
+    std::vector<TrackGUI*> tracks;
 };
 
 #endif // MAINWINDOW_H

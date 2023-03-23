@@ -1,29 +1,50 @@
 # ninja log v5
 629	695	7011344868070538	DAW_autogen/EWIEGA46WW/qrc_minesweeper.cpp	3d2e9dd2a19d4003
 20	216	7011343946213905	minesweeper_autogen/timestamp	5a5d5b6a84fb3bb2
-870	3128	7012422217065813	CMakeFiles/DAW.dir/main.cpp.obj	1dcf3d408e16736
+911	3127	7013095821706356	CMakeFiles/DAW.dir/main.cpp.obj	b214d315717ecbf7
+9	348	7013097206573990	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
 20	216	7011343946213905	minesweeper_autogen/mocs_compilation.cpp	5a5d5b6a84fb3bb2
-7	195	7012503221479497	DAW_autogen/timestamp	8cc2b0486f1d7885
+9	348	7013097206573990	DAW_autogen/timestamp	9b9d4636e06fb233
 710	834	7011343249845836	minesweeper_autogen/EWIEGA46WW/qrc_minesweeper.cpp	f13e940b46f4d1bd
 1922	2141	7011343965391968	minesweeper.exe	f52361a362b8fe91
-7	195	7012503221479497	DAW_autogen/mocs_compilation.cpp	8cc2b0486f1d7885
-713	2191	7011344883086347	CMakeFiles/DAW.dir/QLRClickButton.cpp.obj	8720008e6e78f506
-875	3236	7012422218134298	CMakeFiles/DAW.dir/DAW_autogen/mocs_compilation.cpp.obj	e7f3049eda5c085c
-202	2046	7012503239984290	CMakeFiles/DAW.dir/mainwindow.cpp.obj	1c8547a453e33b1f
-2046	2211	7012503241597001	DAW.exe	c34c7fbf28985110
-3	629	7012507219873649	build.ninja	cf95068f3a7caaa6
-214	1626	7012501631181225	CMakeFiles/DAW.dir/TrackGUI.cpp.obj	20a53830be8760fe
-7	744	7012507280928481	DAW_autogen/timestamp	9b9d4636e06fb233
-7	744	7012507280928481	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
-7	744	7012507280928481	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
-7	744	7012507280928481	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+9	348	7013097206573990	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
 748	2163	7012507296424086	CMakeFiles/DAW.dir/QLRClickButton.cpp.obj	69a5e7a3d6245695
-17	767	7012507533102253	DAW_autogen/timestamp	9b9d4636e06fb233
-17	767	7012507533102253	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
-17	767	7012507533102253	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
-17	767	7012507533102253	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
-781	2479	7012507551819484	CMakeFiles/DAW.dir/TrackGUI.cpp.obj	39d89b46c8b956a2
-772	2639	7012507553434048	CMakeFiles/DAW.dir/main.cpp.obj	b214d315717ecbf7
-767	2742	7012507554456713	CMakeFiles/DAW.dir/DAW_autogen/mocs_compilation.cpp.obj	518d0f3b9f172643
-777	2863	7012507555668152	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
-2864	3053	7012507557494727	DAW.exe	c10ac7dd1686b289
+906	3285	7013095823278304	CMakeFiles/DAW.dir/DAW_autogen/mocs_compilation.cpp.obj	518d0f3b9f172643
+359	2670	7013097229782435	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+2670	2935	7013097232349308	DAW.exe	c10ac7dd1686b289
+3	629	7012507219873649	build.ninja	cf95068f3a7caaa6
+928	3070	7013095821134917	CMakeFiles/DAW.dir/TrackGUI.cpp.obj	39d89b46c8b956a2
+9	348	7013097206573990	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+9	298	7013097460640733	DAW_autogen/timestamp	9b9d4636e06fb233
+9	298	7013097460640733	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+9	298	7013097460640733	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+9	298	7013097460640733	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+308	2703	7013097484669844	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+2703	2979	7013097487388027	DAW.exe	c10ac7dd1686b289
+9	303	7013099196240610	DAW_autogen/timestamp	9b9d4636e06fb233
+9	303	7013099196240610	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+9	303	7013099196240610	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+9	303	7013099196240610	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+319	2709	7013099220272882	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+8	316	7013099373178905	DAW_autogen/timestamp	9b9d4636e06fb233
+8	316	7013099373178905	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+8	316	7013099373178905	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+8	316	7013099373178905	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+333	2364	7013099393655583	CMakeFiles/DAW.dir/TrackGUI.cpp.obj	39d89b46c8b956a2
+327	2806	7013099398071711	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+2806	3085	7013099400784439	DAW.exe	c10ac7dd1686b289
+10	837	7013101225961028	DAW_autogen/timestamp	9b9d4636e06fb233
+10	837	7013101225961028	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+10	837	7013101225961028	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+10	837	7013101225961028	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+851	3041	7013101249953537	CMakeFiles/DAW.dir/TrackGUI.cpp.obj	39d89b46c8b956a2
+846	3058	7013101250125466	CMakeFiles/DAW.dir/main.cpp.obj	b214d315717ecbf7
+837	3263	7013101252173570	CMakeFiles/DAW.dir/DAW_autogen/mocs_compilation.cpp.obj	518d0f3b9f172643
+842	3397	7013101253510566	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+3397	3680	7013101256235954	DAW.exe	c10ac7dd1686b289
+9	273	7013101637002982	DAW_autogen/timestamp	9b9d4636e06fb233
+9	273	7013101637002982	DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+9	273	7013101637002982	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/timestamp	9b9d4636e06fb233
+9	273	7013101637002982	C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/mocs_compilation.cpp	9b9d4636e06fb233
+283	2764	7013101661913784	CMakeFiles/DAW.dir/mainwindow.cpp.obj	b541f35bdab79e04
+2764	3011	7013101664323104	DAW.exe	c10ac7dd1686b289

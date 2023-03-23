@@ -748,6 +748,6 @@ C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/mainwindow.h
  mdp:C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/TrackGUI.h
 C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/QLRClickButton.cpp
 C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/TrackGUI.cpp
-C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/main.cpp
 C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/mainwindow.cpp
  uic:ui_mainwindow.h
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/main.cpp
