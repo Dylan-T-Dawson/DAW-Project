@@ -1,24 +1,98 @@
-minesweeper_autogen/timestamp: \
+DAW_autogen/timestamp: \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCCompilerABI.c \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCInformation.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCXXInformation.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineRCCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeGenericSystem.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCCompiler.cmake.in \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeRCInformation.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystem.cmake.in \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CMakeTestRCCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CheckIncludeFile.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/CheckLibraryExists.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-C.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/GNU.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/FindThreads.cmake \
@@ -27,6 +101,8 @@ minesweeper_autogen/timestamp: \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake \
+  C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-Determine-CXX.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C-ABI.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-C.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/share/cmake-3.24/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
@@ -277,9 +353,12 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qdebug.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qforeach.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qgenericatomic.h \
@@ -293,6 +372,7 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmap.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmargins.h \
@@ -343,7 +423,6 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qversiontagging.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/QIcon \
   C:/Qt/6.4.2/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.4.2/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qaction.h \
@@ -356,12 +435,18 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qinputdevice.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qpen.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -370,6 +455,8 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qscreen.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.4.2/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiglobal.h \
@@ -378,12 +465,33 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QApplication \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QFormLayout \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QHBoxLayout \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLayout \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QSlider \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractslider.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qapplication.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qformlayout.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgraphicsscene.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qpushbutton.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qscrollarea.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qsizepolicy.h \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/qslider.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -546,19 +654,18 @@ minesweeper_autogen/timestamp: \
   C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake \
   C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
   C:/Qt/6.4.2/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessTargets.cmake \
-  C:/Users/dtda230/Desktop/DAW/CMakeLists.txt \
-  C:/Users/dtda230/Desktop/DAW/QLRClickButton.cpp \
-  C:/Users/dtda230/Desktop/DAW/QLRClickButton.h \
-  C:/Users/dtda230/Desktop/DAW/Square.cpp \
-  C:/Users/dtda230/Desktop/DAW/Square.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/CMakeLists.txt \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/QLRClickButton.cpp \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/QLRClickButton.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackGUI.cpp \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackGUI.h \
   CMakeFiles/3.24.2/CMakeCCompiler.cmake \
   CMakeFiles/3.24.2/CMakeCXXCompiler.cmake \
   CMakeFiles/3.24.2/CMakeRCCompiler.cmake \
   CMakeFiles/3.24.2/CMakeSystem.cmake \
-  minesweeper_autogen/moc_predefs.h \
-  C:/Users/dtda230/Desktop/DAW/main.cpp \
-  C:/Users/dtda230/Desktop/DAW/mainwindow.cpp \
-  C:/Users/dtda230/Desktop/DAW/mainwindow.h \
-  C:/Users/dtda230/Desktop/DAW/minesweeper.qrc \
-  C:/Users/dtda230/Desktop/DAW/mainwindow.ui \
+  DAW_autogen/moc_predefs.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/main.cpp \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/mainwindow.cpp \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/mainwindow.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/mainwindow.ui \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/cmake/win/bin/cmake.exe

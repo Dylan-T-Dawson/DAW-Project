@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/dtda230/Desktop/DAW/cmake-build-debug"
+			"value" : "c:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/dtda230/Desktop/DAW"
+			"value" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1531,7 +1531,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dtda230/Desktop/DAW/cmake-build-debug"
+			"value" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug"
 		},
 		{
 			"name" : "DAW_IS_TOP_LEVEL",
@@ -1555,7 +1555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dtda230/Desktop/DAW"
+			"value" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -6072,42 +6072,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "C:/Program Files (x86)/DAW"
-		},
-		{
-			"name" : "minesweeper_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/dtda230/Desktop/DAW/cmake-build-debug"
-		},
-		{
-			"name" : "minesweeper_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "minesweeper_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/dtda230/Desktop/DAW"
 		}
 	],
 	"kind" : "cache",

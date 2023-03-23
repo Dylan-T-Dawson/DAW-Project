@@ -25,6 +25,7 @@ public:
     QPushButton* deleteTrack = new QPushButton;
     QSlider* volume = new QSlider;
     int trackNumber = 0;
+    std::string audioName;
 };
 
 #endif //DAW_TRACKGUI_H

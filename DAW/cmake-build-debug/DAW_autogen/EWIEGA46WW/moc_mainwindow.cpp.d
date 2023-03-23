@@ -1,5 +1,5 @@
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/dtda230/Desktop/DAW/mainwindow.h \
-  C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/moc_predefs.h \
+C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/mainwindow.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -386,5 +386,5 @@ C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/EWIEGA46WW/moc_mainwi
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/dtda230/Desktop/DAW/QLRClickButton.h \
-  C:/Users/dtda230/Desktop/DAW/TrackGUI.h
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/QLRClickButton.h \
+  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackGUI.h

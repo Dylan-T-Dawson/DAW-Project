@@ -229,14 +229,14 @@
 			"includes" : 
 			[
 				{
-					"path" : "C:/Users/dtda230/Desktop/DAW/cmake-build-debug"
+					"path" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug"
 				},
 				{
-					"path" : "C:/Users/dtda230/Desktop/DAW"
+					"path" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW"
 				},
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/include"
+					"path" : "C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/include"
 				},
 				{
 					"backtrace" : 25,
@@ -279,9 +279,8 @@
 				0,
 				1,
 				2,
-				7,
-				9,
-				12
+				6,
+				8
 			]
 		}
 	],
@@ -371,9 +370,8 @@
 				0,
 				1,
 				2,
-				7,
-				9,
-				12
+				6,
+				8
 			]
 		},
 		{
@@ -381,9 +379,9 @@
 			"sourceIndexes" : 
 			[
 				3,
-				6,
-				8,
-				10
+				5,
+				7,
+				9
 			]
 		},
 		{
@@ -391,16 +389,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				5,
-				11
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13,
-				14
+				11
 			]
 		}
 	],
@@ -433,11 +429,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "mainwindow.ui",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "minesweeper.qrc",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -476,21 +467,8 @@
 		},
 		{
 			"backtrace" : 0,
-			"compileGroupIndex" : 0,
-			"isGenerated" : true,
-			"path" : "cmake-build-debug/DAW_autogen/EWIEGA46WW/qrc_minesweeper.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "cmake-build-debug/DAW_autogen/timestamp.rule",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "cmake-build-debug/DAW_autogen/EWIEGA46WW/qrc_minesweeper.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

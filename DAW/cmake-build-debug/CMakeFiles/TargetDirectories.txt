@@ -1,5 +1,5 @@
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/DAW.dir
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/DAW_autogen_timestamp_deps.dir
-C:/Users/dtda230/Desktop/DAW/cmake-build-debug/CMakeFiles/DAW_autogen.dir
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/DAW.dir
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/DAW_autogen_timestamp_deps.dir
+C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW/cmake-build-debug/CMakeFiles/DAW_autogen.dir
