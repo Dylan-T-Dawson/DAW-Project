@@ -27,7 +27,8 @@ public:
     int trackNumber = 0;
     QHBoxLayout* muteLayout;
     QHBoxLayout* volumeLayout;
-    std::string audioName;
+    std::string audioFileName;
+
     ~TrackGUI();
 };
 

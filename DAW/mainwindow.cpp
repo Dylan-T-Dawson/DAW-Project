@@ -4,7 +4,7 @@
 #include <QStyle>
 #include <QMessageBox>
 #include <iostream>
-
+#include <QFileDialog>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
