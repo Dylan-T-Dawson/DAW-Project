@@ -7,12 +7,16 @@
 TrackGUI::TrackGUI(QString name, int trackNum){
     trackNumber = trackNum;
     trackName = name;
+
     label->setText(trackName);
     label->setAlignment(Qt::AlignHCenter);
+
     mute->setText("Mute");
     mute->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
     mute->setMinimumSize(80, 25);
     mute->setMaximumSize(80, 25);
+    mute->setProperty("trackNumber", QVariant(trackNumber));
+
     volume->setOrientation(Qt::Orientation::Horizontal);
     volume->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     volume->setMinimumSize(175, 20);
@@ -21,7 +25,8 @@ TrackGUI::TrackGUI(QString name, int trackNum){
     deleteTrack->setText("Delete");
     deleteTrack->setMinimumSize(80, 25);
     deleteTrack->setMaximumSize(80, 25);
-    deleteTrack->setAutoRepeatDelay(trackNumber);
+    deleteTrack->setProperty("trackNumber", QVariant(trackNumber));
+
     trackHandle->setHorizontalSpacing(7);
     trackHandle->setVerticalSpacing(7);
     trackHandle->setFieldGrowthPolicy(QFormLayout::FieldGrowthPolicy::FieldsStayAtSizeHint);
@@ -34,7 +39,6 @@ TrackGUI::TrackGUI(QString name, int trackNum){
     muteLayout->addWidget(label);
     muteLayout->addWidget(mute);
 
-
     volumeLayout = new QHBoxLayout;
     volumeLayout->setContentsMargins(25,0,0,0);
     volumeLayout->addWidget(volume);
@@ -45,6 +49,7 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
     visual->setMaximumSize(1109, 67);
     visual->setMinimumSize(1109, 67);
+
     track->addLayout(trackHandle);
     track->addWidget(visual);
     track->setContentsMargins(0, 2, 0, 2);
@@ -55,29 +60,9 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
 TrackGUI::~TrackGUI()
 {
-    // remove track layout from its parent layout
 
-    // delete all widgets and layouts within trackHandle
-    QLayoutItem* item;
-    while ((item = muteLayout->takeAt(0)) != nullptr) {
-        if (QWidget* widget = item->widget()) {
-            trackHandle->removeWidget(widget);
-            delete widget;
-        }
-        else {
-            delete item;
-        }
-    }
-    while ((item = volumeLayout->takeAt(0)) != nullptr) {
-        if (QWidget* widget = item->widget()) {
-            trackHandle->removeWidget(widget);
-            delete widget;
-        }
-        else {
-            delete item;
-        }
-    }
-    while ((item = trackHandle->takeAt(0)) != nullptr) {
+    for (int i = muteLayout->count() - 1; i >= 0; --i) {
+        QLayoutItem* item = muteLayout->takeAt(i);
         if (QWidget* widget = item->widget()) {
             trackHandle->removeWidget(widget);
             delete widget;
@@ -87,7 +72,17 @@ TrackGUI::~TrackGUI()
         }
     }
 
-    // delete trackHandle and track
+    for (int i = volumeLayout->count() - 1; i >= 0; --i) {
+        QLayoutItem* item = volumeLayout->takeAt(i);
+        if (QWidget* widget = item->widget()) {
+            trackHandle->removeWidget(widget);
+            delete widget;
+        }
+        else {
+            delete item;
+        }
+    }
+
     delete trackHandle;
     delete visual;
     delete track;

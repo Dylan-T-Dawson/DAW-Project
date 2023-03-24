@@ -33,6 +33,7 @@ private:
     Ui::MainWindow* ui;
     int numTracks;
     std::vector<TrackGUI*> tracks;
+
 };
 
 #endif // MAINWINDOW_H

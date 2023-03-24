@@ -12,17 +12,16 @@ MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(parent), ui(new Ui::MainWindow) {
             ui->setupUi(this);
             numTracks = 0;
-            addTrack();
-        QObject::connect(ui->addTrack, SIGNAL(clicked()), this, SLOT(addTrack()));
+            QObject::connect(ui->addTrack, SIGNAL(clicked()), this, SLOT(addTrack()));
 }
 
 MainWindow::~MainWindow() {
     delete ui;
 }
+
 void MainWindow::addTrack(){
 
-
-    TrackGUI *addT = new TrackGUI("Track " + QString::number(numTracks), numTracks);
+    TrackGUI *addT = new TrackGUI("Track " + QString::number(numTracks + 1), numTracks);
     ui->verticalLayout->insertLayout(numTracks, addT->track);
     numTracks++;
     addT->trackNumber = tracks.size();
@@ -35,13 +34,16 @@ void MainWindow::addTrack(){
 //Removes
 void MainWindow::sync(){
 
-    QPushButton *addTrackButton = qobject_cast<QPushButton *>(ui->verticalLayout->itemAt(numTracks)->widget());
+    for(int i = 0; i < tracks.size(); i++){
+        tracks[i]->deleteTrack->setProperty("trackNumber", i);
+        tracks[i]->mute->setProperty("trackNumber", i);
+        tracks[i]->label->setText("Track " + QString::number(i+1));
+    }
     if(numTracks == maxTrack) {
-        addTrackButton->hide();
+        ui->addTrack->hide();
     }else{
-        if(addTrackButton->isHidden()){
-            //MAKE THIS HAPPEN.
-            addTrackButton->show();
+        if(ui->addTrack->isHidden()){
+            ui->addTrack->show();
         }
     }
 
@@ -49,15 +51,11 @@ void MainWindow::sync(){
 
 void MainWindow::removeTrack(){
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
-    std::cout << buttonSender->autoRepeatDelay();
-    delete tracks[buttonSender->autoRepeatDelay()];
-    for(int i = buttonSender->autoRepeatDelay(); i < tracks.size()-1; i++){
-        tracks[i] = tracks[i]++;
-    }
-    tracks.pop_back();
+    int trackNumber = buttonSender->property("trackNumber").toInt();
+    delete tracks[trackNumber];
+    tracks.erase(tracks.begin() + trackNumber);
     numTracks--;
-
-
+    sync();
 }
 
 void MainWindow::quit() {
