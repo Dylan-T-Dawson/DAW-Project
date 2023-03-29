@@ -4,13 +4,14 @@
 
 #include "TrackGUI.h"
 
+//Fills in trackName, trackNumber, and audioFileName fields and creates track GUI representation.
 TrackGUI::TrackGUI(QString name, int trackNum){
     trackNumber = trackNum;
     trackName = name;
 
     label->setText(trackName);
     label->setAlignment(Qt::AlignHCenter);
-
+    audioFileName = name.toStdString() + ".raw";
     mute->setText("Mute");
     mute->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
     mute->setMinimumSize(80, 25);
@@ -58,6 +59,7 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
 }
 
+//Deletes GUI track representation
 TrackGUI::~TrackGUI()
 {
 

@@ -1594,6 +1594,18 @@
 			"value" : "1"
 		},
 		{
+			"name" : "Jack_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Jack."
+				}
+			],
+			"type" : "PATH",
+			"value" : "Jack_DIR-NOTFOUND"
+		},
+		{
 			"name" : "QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH",
 			"properties" : 
 			[

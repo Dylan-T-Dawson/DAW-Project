@@ -40,7 +40,7 @@ public:
     QPushButton *copyPasteButton;
     QPushButton *deleteButton;
     QSpacerItem *horizontalSpacer;
-    QLabel *label;
+    QLabel *projectNameLabel;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *addTrack;
@@ -156,12 +156,12 @@ public:
 
         functionBar->addItem(horizontalSpacer);
 
-        label = new QLabel(horizontalLayoutWidget);
-        label->setObjectName("label");
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
+        projectNameLabel = new QLabel(horizontalLayoutWidget);
+        projectNameLabel->setObjectName("projectNameLabel");
+        sizePolicy.setHeightForWidth(projectNameLabel->sizePolicy().hasHeightForWidth());
+        projectNameLabel->setSizePolicy(sizePolicy);
 
-        functionBar->addWidget(label);
+        functionBar->addWidget(projectNameLabel);
 
         verticalLayoutWidget = new QWidget(centralwidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
@@ -260,7 +260,7 @@ public:
         fadeButton->setText(QCoreApplication::translate("MainWindow", "Fade In/Out", nullptr));
         copyPasteButton->setText(QCoreApplication::translate("MainWindow", "Copy Selected", nullptr));
         deleteButton->setText(QCoreApplication::translate("MainWindow", "Delete Selected", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Project: Project1", nullptr));
+        projectNameLabel->setText(QCoreApplication::translate("MainWindow", "Project: Project1", nullptr));
         addTrack->setText(QCoreApplication::translate("MainWindow", "Add Track", nullptr));
         label_0->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "30", nullptr));

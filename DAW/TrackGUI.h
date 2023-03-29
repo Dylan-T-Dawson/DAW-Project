@@ -15,19 +15,23 @@
 
 class TrackGUI {
 public:
+
     explicit TrackGUI(QString name, int trackNum);
+
+    //Graphics
     QFormLayout* trackHandle = new QFormLayout;
     QGraphicsView* visual = new QGraphicsView;
     QHBoxLayout* track = new QHBoxLayout;
-    QString trackName;
     QLabel *label = new QLabel;
     QPushButton* mute = new QPushButton;
     QPushButton* deleteTrack = new QPushButton;
     QSlider* volume = new QSlider;
-    int trackNumber = 0;
     QHBoxLayout* muteLayout;
     QHBoxLayout* volumeLayout;
-    std::string audioFileName;
+
+    QString trackName; //Name of track
+    std::string audioFileName; //Name of file associated with track.
+    int trackNumber = 0; //Position in current project.
 
     ~TrackGUI();
 };

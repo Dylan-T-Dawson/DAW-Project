@@ -296,6 +296,9 @@ DAW_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 DAW_SOURCE_DIR:STATIC=C:/Users/dtda230/Desktop/DAW Project/DAW-Project/DAW
 
+//The directory containing a CMake configuration file for Jack.
+Jack_DIR:PATH=Jack_DIR-NOTFOUND
+
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
