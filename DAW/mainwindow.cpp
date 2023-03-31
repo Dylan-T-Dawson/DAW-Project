@@ -171,9 +171,10 @@ void MainWindow::removeTrack(){
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
     int trackNumber = buttonSender->property("trackNumber").toInt();
 
-    //Close the file associated with the track, delete associated file pointers and track information from vectors.
+    //Close the file associated with the track, remove it, delete associated file pointers and track information from vectors.
     //Clear those entries from the vectors and then sync.
     fclose(trackFiles[trackNumber]->file);
+    remove(trackFiles[trackNumber]->fileName.c_str());
     delete tracks[trackNumber];
     tracks.erase(tracks.begin() + trackNumber);
     delete trackFiles[trackNumber];
