@@ -209,7 +209,7 @@ void MainWindow::playTrack(){
             timer->stop();
 
             player->stop();
-
+            tracks[trackNumber]->playTrack->setText("Play");
             delete player;
             delete audioOutput;
             for(int i = 0; i < currentPlaybacks.size(); i++){
@@ -256,6 +256,10 @@ void MainWindow::recordTrack() {
     loop.exec();
     delete newAudioRecorder;
     sync();
+    stopAll();
+    for(int i = 0; i < tracks.size(); i++){
+        tracks[i]->playTrack->setText("Play");
+    }
 
 
 }
