@@ -236,7 +236,7 @@ void MainWindow::stopAll(){
 }
 
 void MainWindow::recordTrack() {
-
+    stopAll();
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
 
     int trackNumber = buttonSender->property("trackNumber").toInt();

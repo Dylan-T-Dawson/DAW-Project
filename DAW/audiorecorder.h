@@ -24,7 +24,7 @@ class AudioRecorder : public QMainWindow
 
 public:
     AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin);
-
+    bool playing = false;
 signals:
     void recordingFinished();
 

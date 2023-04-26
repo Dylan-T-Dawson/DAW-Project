@@ -33,6 +33,8 @@ AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
     m_captureSession.setRecorder(m_audioRecorder);
     m_captureSession.setAudioInput(new QAudioInput(this));
     m_trackTarget = buttonSender;
+    ui->recordButton->setDisabled(true);
+    ui->recordButton->setText("Get Ready...");
     // ### replace with a monitoring output once we have it.
 //    m_probe = new QAudioProbe(this);
 //    connect(m_probe, &QAudioProbe::audioBufferProbed,
@@ -40,6 +42,7 @@ AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
 //    m_probe->setSource(m_audioRecorder);
 
     //audio device
+
 
 
 
@@ -96,7 +99,7 @@ void AudioRecorder::onStateChanged(QMediaRecorder::RecorderState state)
 
 void AudioRecorder::toggleRecord()
 {
-
+   playing = true;
     if (m_audioRecorder->recorderState() == QMediaRecorder::StoppedState) {
         m_captureSession.audioInput()->setDevice(*(new QAudioDevice()));
 
@@ -123,6 +126,7 @@ void AudioRecorder::toggleRecord()
     }
     else {
         m_audioRecorder->stop();
+        playing = false;
     }
 }
 
@@ -208,13 +212,18 @@ void AudioRecorder::processBuffer(const QAudioBuffer& buffer)
 }
 
 void AudioRecorder::closeEvent(QCloseEvent *event) {
+    if(playing){
+        toggleRecord();
+    }
     QMainWindow::closeEvent(event);
     emit recordingFinished();
 }
 
 void AudioRecorder::receivedStart(){
-    std::cout << "Received" << std::endl;
+
+    ui->recordButton->setDisabled(false);
     toggleRecord();
+
 }
 void AudioRecorder::updateFormats(){
 
