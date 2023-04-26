@@ -18,7 +18,10 @@ MainWindow::MainWindow(QWidget* parent) :
     QObject::connect(ui->deleteProjectButton, SIGNAL(clicked()), this, SLOT(deleteProject()));
     QObject::connect(ui->newProjectButton, SIGNAL(clicked()), this, SLOT(addProject()));
     QObject::connect(ui->playButton, SIGNAL(clicked()), this, SLOT(playAll()));
-
+    QObject::connect(ui->stopPlay, SIGNAL(clicked()), this, SLOT(stopAll()));
+    timer = new QTimer(this);
+    QObject::connect(timer, SIGNAL(timeout()), this, SLOT(sliderEvent()));
+    timer->start(5);
     //Creates a default directory if one does not exist.
     std::string path = "../Projects/Default";
     QDir direct;
@@ -66,6 +69,12 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
+void MainWindow::sliderEvent(){
+    for(int i = 0; i < currentPlaybacks.size(); i++){
+        currentPlaybacks[i]->audioOutput()->setVolume(tracks[i]->volume->value()/100.0);
+    }
+}
+
 //Adds a new track, including its GUI representation, corresponding .raw file, and File pointer (which goes in
 //trackFiles vector). Connects its buttons to their appropriate functions.
 void MainWindow::addTrack(){
@@ -85,6 +94,7 @@ void MainWindow::addTrack(){
     QObject::connect(addT->deleteTrack, SIGNAL(clicked()), this, SLOT(removeTrack()));
     QObject::connect(addT->recordTrack, SIGNAL(clicked()), this, SLOT(recordTrack()));
     QObject::connect(addT->playTrack, SIGNAL(clicked()), this, SLOT(playTrack()));
+    QObject::connect(addT->mute, SIGNAL(clicked()), this, SLOT(muteTrack()));
     //Add mute connect here
     sync();
 }
@@ -116,6 +126,33 @@ void MainWindow::sync(){
     }
 }
 
+void MainWindow::muteTrack(){
+
+    QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
+    int trackNumber = buttonSender->property("trackNumber").toInt();
+    int playBack = -1;
+    timer->stop();
+    for(int i = 0; i < currentPlaybacks.size(); i++){
+        if(currentPlaybacks[i]->property("trackN") == trackNumber){
+            playBack = i;
+            break;
+        }
+    }
+
+    if(playBack == -1){
+        return;
+    }
+    if(currentPlaybacks[playBack]->audioOutput()->isMuted() == true){
+        currentPlaybacks[playBack]->audioOutput()->setMuted(false);
+        tracks[trackNumber]->mute->setText("Mute");
+    }else {
+        currentPlaybacks[playBack]->audioOutput()->setMuted(true);
+        tracks[trackNumber]->mute->setText("Unmute");
+    }
+    timer->start();
+
+}
+
 void MainWindow::removeTrack(){
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
     int trackNumber = buttonSender->property("trackNumber").toInt();
@@ -137,13 +174,24 @@ void MainWindow::playTrack(){
 
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
     int trackNumber = buttonSender->property("trackNumber").toInt();
+
+    for(int i = 0; i < currentPlaybacks.size(); i++){
+        if(currentPlaybacks[i]->property("trackN") == trackNumber){
+            tracks[i]->playTrack->setText("Play");
+            emit currentPlaybacks[i]->mediaStatusChanged(QMediaPlayer::EndOfMedia);
+            return;
+        }
+    }
+
     int fd = fileno(trackFiles[trackNumber]->file);
+    float volume = (tracks[trackNumber])->volume->value() / 100.0;
     QFile file;
     file.open(fd, QIODevice::ReadOnly);
     QMediaPlayer *player = new QMediaPlayer;
     QAudioOutput *audioOutput = new QAudioOutput;
+
     player->setAudioOutput(audioOutput);
-    audioOutput->setVolume(50);
+    audioOutput->setVolume(volume);
     //player->setSource(QUrl::fromLocalFile(file.fileName()));
     QString currentDir = QDir::currentPath(); // Get the absolute path of the current working directory
     QFileInfo currentInfo(currentDir); // Create a QFileInfo object for the current directory
@@ -151,17 +199,40 @@ void MainWindow::playTrack(){
     player->setSource(QUrl::fromLocalFile(parentDir + "/" + QString::fromStdString(currentProject).mid(3) + "Track " + QString::number(trackNumber + 1) + ".m4a"));
 
     player->play();
-
+    tracks[trackNumber]->playTrack->setText("Stop");
+    player->setProperty("trackN", trackNumber);
+    currentPlaybacks.push_back(player);
 
     QObject::connect(player, &QMediaPlayer::mediaStatusChanged, [=](QMediaPlayer::MediaStatus status) {
+
         if (status == QMediaPlayer::EndOfMedia) {
+            timer->stop();
+
             player->stop();
+
             delete player;
             delete audioOutput;
-            std::cout << "Here" << std::endl;
+            for(int i = 0; i < currentPlaybacks.size(); i++){
+                if(currentPlaybacks[i]->property("trackN") == trackNumber){
+                    currentPlaybacks.erase(currentPlaybacks.begin() + i);
+                }
+            }
+            timer->start();
         }
+
     });
 
+}
+
+void MainWindow::stopAll(){
+    timer->stop();
+
+    while(currentPlaybacks.empty() == false){
+
+        emit currentPlaybacks[0]->mediaStatusChanged(QMediaPlayer::EndOfMedia);
+    }
+
+    timer->start();
 }
 
 void MainWindow::recordTrack() {
@@ -183,6 +254,7 @@ void MainWindow::recordTrack() {
 
     playAll();
     loop.exec();
+    delete newAudioRecorder;
     sync();
 
 
@@ -280,6 +352,14 @@ void MainWindow::addProject(){
 }
 
 void MainWindow::playAll(){
+    timer->stop();
+
+    while(currentPlaybacks.empty() == false){
+
+        emit currentPlaybacks[0]->mediaStatusChanged(QMediaPlayer::EndOfMedia);
+    }
+
+    timer->start();
     for(int i = 0; i < tracks.size(); i++){
         QPushButton *button = tracks[i]->playTrack;
         button->click();

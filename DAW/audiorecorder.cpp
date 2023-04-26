@@ -20,7 +20,7 @@
 #include <QMimeType>
 #include <iostream>
 #include <QThread>
-
+#include <QMediaFormat>
 static QList<qreal> getBufferLevels(const QAudioBuffer &buffer);
 
 AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
@@ -39,40 +39,15 @@ AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
 //            this, &AudioRecorder::processBuffer);
 //    m_probe->setSource(m_audioRecorder);
 
-    //audio devices
-    ui->audioDeviceBox->addItem(tr("Default"), QVariant(QString()));
-    for (auto device: QMediaDevices::audioInputs()) {
-        auto name = device.description();
-        ui->audioDeviceBox->addItem(name, QVariant::fromValue(device));
-    }
+    //audio device
 
-    //audio codecs and container formats
-    updateFormats();
-    connect(ui->audioCodecBox, &QComboBox::currentIndexChanged, this, &AudioRecorder::updateFormats);
-    connect(ui->containerBox, &QComboBox::currentIndexChanged, this, &AudioRecorder::updateFormats);
 
-    //sample rate
-    ui->sampleRateBox->setRange(m_captureSession.audioInput()->device().minimumSampleRate(),
-                                m_captureSession.audioInput()->device().maximumSampleRate());
-    ui->sampleRateBox->setValue(qBound(m_captureSession.audioInput()->device().minimumSampleRate(), 44100,
-                                       m_captureSession.audioInput()->device().maximumSampleRate()));
 
-    //channels
-    ui->channelsBox->addItem(tr("Default"), QVariant(-1));
-    ui->channelsBox->addItem(QStringLiteral("1"), QVariant(1));
-    ui->channelsBox->addItem(QStringLiteral("2"), QVariant(2));
-    ui->channelsBox->addItem(QStringLiteral("4"), QVariant(4));
 
-    //quality
-    ui->qualitySlider->setRange(0, int(QImageCapture::VeryHighQuality));
-    ui->qualitySlider->setValue(int(QImageCapture::NormalQuality));
 
-    //bit rates:
-    ui->bitrateBox->addItem(tr("Default"), QVariant(0));
-    ui->bitrateBox->addItem(QStringLiteral("32000"), QVariant(32000));
-    ui->bitrateBox->addItem(QStringLiteral("64000"), QVariant(64000));
-    ui->bitrateBox->addItem(QStringLiteral("96000"), QVariant(96000));
-    ui->bitrateBox->addItem(QStringLiteral("128000"), QVariant(128000));
+
+
+
 
     connect(m_audioRecorder, &QMediaRecorder::durationChanged, this, &AudioRecorder::updateProgress);
     connect(m_audioRecorder, &QMediaRecorder::recorderStateChanged, this, &AudioRecorder::onStateChanged);
@@ -117,20 +92,13 @@ void AudioRecorder::onStateChanged(QMediaRecorder::RecorderState state)
         ui->statusbar->showMessage(statusMessage);
 }
 
-static QVariant boxValue(const QComboBox *box)
-{
-    int idx = box->currentIndex();
-    if (idx == -1)
-        return QVariant();
 
-    return box->itemData(idx);
-}
 
 void AudioRecorder::toggleRecord()
 {
 
     if (m_audioRecorder->recorderState() == QMediaRecorder::StoppedState) {
-        m_captureSession.audioInput()->setDevice(boxValue(ui->audioDeviceBox).value<QAudioDevice>());
+        m_captureSession.audioInput()->setDevice(*(new QAudioDevice()));
 
         QString currentDir = QDir::currentPath(); // Get the absolute path of the current working directory
         QFileInfo currentInfo(currentDir); // Create a QFileInfo object for the current directory
@@ -140,14 +108,16 @@ void AudioRecorder::toggleRecord()
         m_audioRecorder->setOutputLocation(toRec);
 
 
-        m_audioRecorder->setMediaFormat(selectedMediaFormat());
-        m_audioRecorder->setAudioSampleRate(ui->sampleRateBox->value());
-        m_audioRecorder->setAudioBitRate(boxValue(ui->bitrateBox).toInt());
-        m_audioRecorder->setAudioChannelCount(boxValue(ui->channelsBox).toInt());
-        m_audioRecorder->setQuality(QMediaRecorder::Quality(ui->qualitySlider->value()));
-        m_audioRecorder->setEncodingMode(ui->constantQualityRadioButton->isChecked() ?
-                                 QMediaRecorder::ConstantQualityEncoding :
-                                 QMediaRecorder::ConstantBitRateEncoding);
+       QMediaFormat format;
+        format.setAudioCodec(QMediaFormat::AudioCodec::AAC);
+
+
+        m_audioRecorder->setMediaFormat(format);
+        m_audioRecorder->setAudioSampleRate(m_captureSession.audioInput()->device().maximumSampleRate());
+        m_audioRecorder->setAudioBitRate(96000);
+        m_audioRecorder->setAudioChannelCount(1);
+        m_audioRecorder->setQuality(QMediaRecorder::HighQuality);
+        m_audioRecorder->setEncodingMode(QMediaRecorder::ConstantQualityEncoding);
 
         m_audioRecorder->record();
     }
@@ -182,42 +152,7 @@ void AudioRecorder::displayErrorMessage()
     ui->statusbar->showMessage(m_audioRecorder->errorString());
 }
 
-void AudioRecorder::updateFormats()
-{
-    if (m_updatingFormats)
-        return;
-    m_updatingFormats = true;
 
-    QMediaFormat format;
-    if (ui->containerBox->count())
-        format.setFileFormat(boxValue(ui->containerBox).value<QMediaFormat::FileFormat>());
-    if (ui->audioCodecBox->count())
-        format.setAudioCodec(boxValue(ui->audioCodecBox).value<QMediaFormat::AudioCodec>());
-
-    int currentIndex = 0;
-    ui->audioCodecBox->clear();
-    ui->audioCodecBox->addItem(tr("Default audio codec"), QVariant::fromValue(QMediaFormat::AudioCodec::Unspecified));
-    for (auto codec : format.supportedAudioCodecs(QMediaFormat::Encode)) {
-        if (codec == format.audioCodec())
-            currentIndex = ui->audioCodecBox->count();
-        ui->audioCodecBox->addItem(QMediaFormat::audioCodecDescription(codec), QVariant::fromValue(codec));
-    }
-    ui->audioCodecBox->setCurrentIndex(currentIndex);
-
-    currentIndex = 0;
-    ui->containerBox->clear();
-    ui->containerBox->addItem(tr("Default file format"), QVariant::fromValue(QMediaFormat::UnspecifiedFormat));
-    for (auto container : format.supportedFileFormats(QMediaFormat::Encode)) {
-        if (container < QMediaFormat::Mpeg4Audio) // Skip video formats
-            continue;
-        if (container == format.fileFormat())
-            currentIndex = ui->containerBox->count();
-        ui->containerBox->addItem(QMediaFormat::fileFormatDescription(container), QVariant::fromValue(container));
-    }
-    ui->containerBox->setCurrentIndex(currentIndex);
-
-    m_updatingFormats = false;
-}
 
 void AudioRecorder::clearAudioLevels()
 {
@@ -225,13 +160,7 @@ void AudioRecorder::clearAudioLevels()
         m_audioLevel->setLevel(0);
 }
 
-QMediaFormat AudioRecorder::selectedMediaFormat() const
-{
-    QMediaFormat format;
-    format.setFileFormat(boxValue(ui->containerBox).value<QMediaFormat::FileFormat>());
-    format.setAudioCodec(boxValue(ui->audioCodecBox).value<QMediaFormat::AudioCodec>());
-    return format;
-}
+
 
 // returns the audio level for each channel
 QList<qreal> getBufferLevels(const QAudioBuffer &buffer)
@@ -270,7 +199,6 @@ void AudioRecorder::processBuffer(const QAudioBuffer& buffer)
         for (int i = 0; i < buffer.format().channelCount(); ++i) {
             AudioLevel *level = new AudioLevel(ui->centralwidget);
             m_audioLevels.append(level);
-            ui->levelsLayout->addWidget(level);
         }
     }
 
@@ -287,4 +215,7 @@ void AudioRecorder::closeEvent(QCloseEvent *event) {
 void AudioRecorder::receivedStart(){
     std::cout << "Received" << std::endl;
     toggleRecord();
+}
+void AudioRecorder::updateFormats(){
+
 }

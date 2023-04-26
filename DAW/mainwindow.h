@@ -10,8 +10,7 @@
 #include <QFileDialog>
 #include <QInputDialog>
 
-#include "jack/jack.h"
-#include <jack/systemdeps.h>
+#include <QMediaPlayer>
 #include <vector>
 #include <memory>
 #include <algorithm>
@@ -56,6 +55,9 @@ private slots:
     void addProject();
     void Reload();
     void playAll();
+    void sliderEvent();
+    void stopAll();
+    void muteTrack();
     void onRecordingFinished();
     static void quit();
 
@@ -71,8 +73,8 @@ private:
 
     std::vector<TrackGUI*> tracks; //Holds instances of the TrackGUI class to represent tracks
     std::vector<TrackFile*> trackFiles; //Holds instances of the trackFile class to represent files tied to tracks
-
-    QProcess* jackProcess; //Audio playback or record processes will look like this.
+    QTimer* timer;
+    std::vector<QMediaPlayer*> currentPlaybacks;
 
 };
 

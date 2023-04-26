@@ -36,6 +36,8 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
     volume->setOrientation(Qt::Orientation::Horizontal);
     volume->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    volume->setRange(0,100);
+    volume->setValue(50);
     volume->setMinimumSize(175, 20);
     volume->setMaximumSize(175, 20);
 
