@@ -20,12 +20,19 @@ public:
 
     //Graphics
     QFormLayout* trackHandle = new QFormLayout;
+
     QGraphicsView* visual = new QGraphicsView;
+
     QHBoxLayout* track = new QHBoxLayout;
+
     QLabel *label = new QLabel;
+
     QPushButton* mute = new QPushButton;
     QPushButton* deleteTrack = new QPushButton;
+    QPushButton* recordTrack = new QPushButton;
+    QPushButton* playTrack = new QPushButton;
     QSlider* volume = new QSlider;
+
     QHBoxLayout* muteLayout;
     QHBoxLayout* volumeLayout;
 

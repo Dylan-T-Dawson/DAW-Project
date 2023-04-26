@@ -1,5 +1,5 @@
-C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/mainwindow.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_autogen/moc_predefs.h \
+C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/dtda230/Desktop/DAW/mainwindow.h \
+  C:/Users/dtda230/Desktop/DAW/cmake-build-debug/DAW_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/adxintrin.h \
@@ -463,6 +463,7 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtCore/QRect \
   C:/Qt/6.4.2/mingw_64/include/QtCore/QSize \
   C:/Qt/6.4.2/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/QUrl \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qarraydata.h \
@@ -516,6 +517,7 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmargins.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmath.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmetacontainer.h \
+  C:/Qt/6.4.2/mingw_64/include/QtCore/qmetaobject.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qnativeinterface.h \
@@ -606,7 +608,17 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/QMediaCaptureSession \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/QMediaRecorder \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qmediacapturesession.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qmediametadata.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qmediarecorder.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Qt/6.4.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QApplication \
+  C:/Qt/6.4.2/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QFileDialog \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QFormLayout \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/QGraphicsView \
@@ -648,11 +660,12 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/QLRClickButton.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackFIle.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackGUI.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/lib/jack/jack.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/lib/jack/systemdeps.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/lib/jack/transport.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/lib/jack/types.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/lib/jack/weakmacros.h
+  C:/Users/dtda230/Desktop/DAW/QLRClickButton.h \
+  C:/Users/dtda230/Desktop/DAW/TrackFIle.h \
+  C:/Users/dtda230/Desktop/DAW/TrackGUI.h \
+  C:/Users/dtda230/Desktop/DAW/audiorecorder.h \
+  C:/Users/dtda230/Desktop/DAW/lib/jack/jack.h \
+  C:/Users/dtda230/Desktop/DAW/lib/jack/systemdeps.h \
+  C:/Users/dtda230/Desktop/DAW/lib/jack/transport.h \
+  C:/Users/dtda230/Desktop/DAW/lib/jack/types.h \
+  C:/Users/dtda230/Desktop/DAW/lib/jack/weakmacros.h

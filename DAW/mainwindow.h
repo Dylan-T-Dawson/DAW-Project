@@ -4,25 +4,27 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QProcess>
-#include "QLRClickButton.h"
+#include <QApplication>
+#include <QStyle>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QInputDialog>
+
 #include "jack/jack.h"
 #include <jack/systemdeps.h>
 #include <vector>
 #include <memory>
-#include "TrackGUI.h"
 #include <algorithm>
-#include <QApplication>
-#include <QStyle>
-#include <QMessageBox>
 #include <iostream>
-#include <QFileDialog>
 #include <stdio.h>
 #include <chrono>
 #include <thread>
 #include <string>
-#include "TrackFIle.h"
-#include <QInputDialog>
 
+#include "TrackFIle.h"
+#include "TrackGUI.h"
+#include "QLRClickButton.h"
+#include "audiorecorder.h"
 
 #define maxTrack 8
 
@@ -36,23 +38,33 @@ Q_OBJECT
 public:
     explicit MainWindow(QWidget* parent = nullptr);
 
+
     ~MainWindow() override;
+
+signals:
+    void recordingTime();
 
 private slots:
 
     void addTrack();
     void removeTrack();
+    void recordTrack();
+    void playTrack();
     void sync();
     void loadProject();
     void deleteProject();
     void addProject();
+    void Reload();
+    void playAll();
+    void onRecordingFinished();
     static void quit();
 
 private:
     Ui::MainWindow* ui;
 
     int numTracks; //Number of tracks in current project
-    bool loaded = 0; //True if any project has been loaded in the current session
+    bool loaded = false; //True if any project has been loaded in the current session
+
 
     std::string fullProjectPath; //Full path to the current project.
     std::string currentProject; //Relative path to the current project.

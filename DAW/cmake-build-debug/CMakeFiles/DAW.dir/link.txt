@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\DAW.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\DAW.dir/objects.a @CMakeFiles\DAW.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\DAW.dir/objects.a -Wl,--no-whole-archive -o DAW.exe -Wl,--out-implib,libDAW.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\DAW.dir\linklibs.rsp

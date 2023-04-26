@@ -11,22 +11,33 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
     label->setText(trackName);
     label->setAlignment(Qt::AlignHCenter);
-    audioFileName = name.toStdString() + ".raw";
+    audioFileName = name.toStdString() + ".m4a";
+
     mute->setText("Mute");
     mute->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
     mute->setMinimumSize(80, 25);
     mute->setMaximumSize(80, 25);
     mute->setProperty("trackNumber", QVariant(trackNumber));
 
-    volume->setOrientation(Qt::Orientation::Horizontal);
-    volume->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-    volume->setMinimumSize(175, 20);
-    volume->setMaximumSize(175, 20);
-
     deleteTrack->setText("Delete");
     deleteTrack->setMinimumSize(80, 25);
     deleteTrack->setMaximumSize(80, 25);
     deleteTrack->setProperty("trackNumber", QVariant(trackNumber));
+
+    recordTrack->setText("Record");
+    recordTrack->setMinimumSize(80, 25);
+    recordTrack->setMaximumSize(80, 25);
+    recordTrack->setProperty("trackNumber", QVariant(trackNumber));
+
+    playTrack->setText("Play");
+    playTrack->setMinimumSize(80, 25);
+    playTrack->setMaximumSize(80, 25);
+    playTrack->setProperty("trackNumber", QVariant(trackNumber));
+
+    volume->setOrientation(Qt::Orientation::Horizontal);
+    volume->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    volume->setMinimumSize(175, 20);
+    volume->setMaximumSize(175, 20);
 
     trackHandle->setHorizontalSpacing(7);
     trackHandle->setVerticalSpacing(7);
@@ -38,11 +49,13 @@ TrackGUI::TrackGUI(QString name, int trackNum){
 
     muteLayout = new QHBoxLayout;
     muteLayout->addWidget(label);
+    muteLayout->addWidget(recordTrack);
     muteLayout->addWidget(mute);
 
     volumeLayout = new QHBoxLayout;
     volumeLayout->setContentsMargins(25,0,0,0);
     volumeLayout->addWidget(volume);
+    volumeLayout->addWidget(playTrack);
     volumeLayout->addWidget(deleteTrack);
 
     trackHandle->addRow(muteLayout);

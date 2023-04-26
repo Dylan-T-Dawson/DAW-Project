@@ -15,7 +15,6 @@ public:
 
     //Time before audio starts
     double delay;
-
     //Time until audio ends
     double length;
 };
