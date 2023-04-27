@@ -78,7 +78,7 @@ void MainWindow::sliderEvent(){
 //Adds a new track, including its GUI representation, corresponding .raw file, and File pointer (which goes in
 //trackFiles vector). Connects its buttons to their appropriate functions.
 void MainWindow::addTrack(){
-
+    stopAll();
     TrackGUI *addT = new TrackGUI("Track " + QString::number(numTracks + 1), numTracks);
     ui->verticalLayout->insertLayout(numTracks, addT->track);
     numTracks++;
@@ -154,6 +154,7 @@ void MainWindow::muteTrack(){
 }
 
 void MainWindow::removeTrack(){
+    stopAll();
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
     int trackNumber = buttonSender->property("trackNumber").toInt();
 
@@ -236,9 +237,16 @@ void MainWindow::stopAll(){
 }
 
 void MainWindow::recordTrack() {
+    recording = true;
+    ui->addTrack->hide();
     stopAll();
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
-
+    if(firstCalled){
+        AudioRecorder *newAudioRecorder = new AudioRecorder(buttonSender, this);
+        emit initializeRec();
+        firstCalled = false;
+        delete newAudioRecorder;
+    }
     int trackNumber = buttonSender->property("trackNumber").toInt();
     buttonSender->setProperty("project", QString::fromStdString(currentProject));
 
@@ -249,10 +257,11 @@ void MainWindow::recordTrack() {
     newAudioRecorder->show();
     QEventLoop loop;
     QObject::connect(newAudioRecorder, SIGNAL(recordingFinished()), &loop, SLOT(quit()));
+    connect(newAudioRecorder, SIGNAL(playTime()), this, SLOT(playAll()));
 
     emit recordingTime();
 
-    playAll();
+    QThread::msleep(625);
     loop.exec();
     delete newAudioRecorder;
     sync();
@@ -260,7 +269,8 @@ void MainWindow::recordTrack() {
     for(int i = 0; i < tracks.size(); i++){
         tracks[i]->playTrack->setText("Play");
     }
-
+    ui->addTrack->show();
+    recording = false;
 
 }
 
@@ -356,6 +366,7 @@ void MainWindow::addProject(){
 }
 
 void MainWindow::playAll(){
+    std::cout << "Play" << std::endl;
     timer->stop();
 
     while(currentPlaybacks.empty() == false){

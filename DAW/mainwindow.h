@@ -42,6 +42,7 @@ public:
 
 signals:
     void recordingTime();
+    void initializeRec();
 
 private slots:
 
@@ -75,7 +76,8 @@ private:
     std::vector<TrackFile*> trackFiles; //Holds instances of the trackFile class to represent files tied to tracks
     QTimer* timer;
     std::vector<QMediaPlayer*> currentPlaybacks;
-
+    bool firstCalled = true;
+    bool recording = false;
 };
 
 #endif // MAINWINDOW_H

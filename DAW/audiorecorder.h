@@ -27,6 +27,7 @@ public:
     bool playing = false;
 signals:
     void recordingFinished();
+    void playTime();
 
 
 public slots:
@@ -41,7 +42,7 @@ private slots:
     void updateProgress(qint64 pos);
     void displayErrorMessage();
     void receivedStart();
-
+    void initialized();
     void updateFormats();
 
 private:
@@ -57,6 +58,7 @@ private:
     bool m_outputLocationSet = false;
     bool m_updatingFormats = false;
     QPushButton* m_trackTarget;
+    bool clearing = false;
 
 };
 

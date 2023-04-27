@@ -18,6 +18,7 @@
 #include <qaudioinput.h>
 #include <qimagecapture.h>
 #include <QMimeType>
+#include <QCloseEvent>
 #include <iostream>
 #include <QThread>
 #include <QMediaFormat>
@@ -56,6 +57,7 @@ AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
     connect(m_audioRecorder, &QMediaRecorder::recorderStateChanged, this, &AudioRecorder::onStateChanged);
     connect(m_audioRecorder, &QMediaRecorder::errorChanged, this, &AudioRecorder::displayErrorMessage);
     connect(parentWin, SIGNAL(recordingTime()), this, SLOT(receivedStart()));
+    connect(parentWin, SIGNAL(initializeRec()), this, SLOT(initialized()));
 }
 
 void AudioRecorder::updateProgress(qint64 duration)
@@ -122,7 +124,16 @@ void AudioRecorder::toggleRecord()
         m_audioRecorder->setQuality(QMediaRecorder::HighQuality);
         m_audioRecorder->setEncodingMode(QMediaRecorder::ConstantQualityEncoding);
 
+
+
         m_audioRecorder->record();
+
+
+
+    if(clearing == false){
+         emit playTime();
+    }
+        clearing = false;
     }
     else {
         m_audioRecorder->stop();
@@ -216,7 +227,9 @@ void AudioRecorder::closeEvent(QCloseEvent *event) {
         toggleRecord();
     }
     QMainWindow::closeEvent(event);
-    emit recordingFinished();
+    if(!clearing) {
+        emit recordingFinished();
+    }
 }
 
 void AudioRecorder::receivedStart(){
@@ -227,4 +240,12 @@ void AudioRecorder::receivedStart(){
 }
 void AudioRecorder::updateFormats(){
 
+}
+
+void AudioRecorder::initialized(){
+    clearing = true;
+    toggleRecord();
+    clearing = true;
+    toggleRecord();
+    closeEvent(new QCloseEvent());
 }
