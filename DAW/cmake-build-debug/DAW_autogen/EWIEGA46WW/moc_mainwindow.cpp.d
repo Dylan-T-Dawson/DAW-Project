@@ -237,12 +237,8 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
-  C:/Qt/6.4.2/mingw_64/include/QtCore/QList \
   C:/Qt/6.4.2/mingw_64/include/QtCore/QObject \
   C:/Qt/6.4.2/mingw_64/include/QtCore/QProcess \
-  C:/Qt/6.4.2/mingw_64/include/QtCore/QRect \
-  C:/Qt/6.4.2/mingw_64/include/QtCore/QSize \
-  C:/Qt/6.4.2/mingw_64/include/QtCore/QSizeF \
   C:/Qt/6.4.2/mingw_64/include/QtCore/QUrl \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qanystringview.h \
@@ -308,7 +304,6 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtCore/qobjectdefs_impl.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qpair.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qpoint.h \
-  C:/Qt/6.4.2/mingw_64/include/QtCore/qpointer.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qprocess.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qprocessordetection.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qrect.h \
@@ -344,15 +339,11 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.4.2/mingw_64/include/QtCore/qversiontagging.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/QMouseEvent \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qbrush.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qcolor.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qcursor.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qevent.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qeventpoint.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qfontmetrics.h \
@@ -360,7 +351,6 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qimage.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qinputdevice.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpaintdevice.h \
@@ -370,12 +360,10 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpixmap.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qrgba64.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtextcursor.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtextformat.h \
@@ -384,8 +372,6 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qtransform.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qvector2d.h \
-  C:/Qt/6.4.2/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.4.2/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.4.2/mingw_64/include/QtMultimedia/QMediaCaptureSession \
@@ -443,7 +429,6 @@ C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/cmake-build-debug/DAW_auto
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.4.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/QLRClickButton.h \
   C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackFIle.h \
   C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/TrackGUI.h \
   C:/Users/dtda230/Desktop/DAW\ Project/DAW-Project/DAW/audiorecorder.h

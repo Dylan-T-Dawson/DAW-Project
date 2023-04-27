@@ -2,15 +2,13 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 
 #include "audiorecorder.h"
-#include "audiolevel.h"
-
 #include "ui_audiorecorder.h"
-
+#include <QTimer>
 #include <QMediaRecorder>
 #include <QDir>
 #include <QFileDialog>
-#include <QMediaRecorder>
 #include <QStandardPaths>
+#include <audiolevel.h>
 #include <qmediadevices.h>
 #include <qmediaformat.h>
 #include <qaudiodevice.h>
@@ -22,37 +20,22 @@
 #include <iostream>
 #include <QThread>
 #include <QMediaFormat>
+
 static QList<qreal> getBufferLevels(const QAudioBuffer &buffer);
 
-AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin)
+AudioRecorder::AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin, int negLatency)
     : ui(new Ui::AudioRecorder)
 {
     ui->setupUi(this);
     trackNumber = buttonSender->property("trackNumber").toInt();
     project = (buttonSender->property("project")).toString();
     m_audioRecorder = new QMediaRecorder(this);
+    negativeLatency = negLatency;
     m_captureSession.setRecorder(m_audioRecorder);
     m_captureSession.setAudioInput(new QAudioInput(this));
     m_trackTarget = buttonSender;
     ui->recordButton->setDisabled(true);
     ui->recordButton->setText("Get Ready...");
-    // ### replace with a monitoring output once we have it.
-//    m_probe = new QAudioProbe(this);
-//    connect(m_probe, &QAudioProbe::audioBufferProbed,
-//            this, &AudioRecorder::processBuffer);
-//    m_probe->setSource(m_audioRecorder);
-
-    //audio device
-
-
-
-
-
-
-
-
-
-
     connect(m_audioRecorder, &QMediaRecorder::durationChanged, this, &AudioRecorder::updateProgress);
     connect(m_audioRecorder, &QMediaRecorder::recorderStateChanged, this, &AudioRecorder::onStateChanged);
     connect(m_audioRecorder, &QMediaRecorder::errorChanged, this, &AudioRecorder::displayErrorMessage);
@@ -125,20 +108,22 @@ void AudioRecorder::toggleRecord()
         m_audioRecorder->setEncodingMode(QMediaRecorder::ConstantQualityEncoding);
 
 
-
-        m_audioRecorder->record();
-
-
-
-    if(clearing == false){
-         emit playTime();
-    }
+        if (clearing == false) {
+            QTimer::singleShot(negativeLatency, this, &AudioRecorder::startRecording);
+            emit playTime();
+        }
         clearing = false;
     }
     else {
         m_audioRecorder->stop();
         playing = false;
     }
+}
+
+
+
+void AudioRecorder::startRecording() {
+    m_audioRecorder->record();
 }
 
 void AudioRecorder::togglePause()

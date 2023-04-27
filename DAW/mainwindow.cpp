@@ -4,6 +4,7 @@
 #include <QAudioOutput>
 #include <QTimer>
 #include <QThread>
+
 MainWindow::MainWindow(QWidget* parent) :
         QMainWindow(parent), ui(new Ui::MainWindow) {
 
@@ -19,9 +20,11 @@ MainWindow::MainWindow(QWidget* parent) :
     QObject::connect(ui->newProjectButton, SIGNAL(clicked()), this, SLOT(addProject()));
     QObject::connect(ui->playButton, SIGNAL(clicked()), this, SLOT(playAll()));
     QObject::connect(ui->stopPlay, SIGNAL(clicked()), this, SLOT(stopAll()));
+
     timer = new QTimer(this);
     QObject::connect(timer, SIGNAL(timeout()), this, SLOT(sliderEvent()));
     timer->start(5);
+
     //Creates a default directory if one does not exist.
     std::string path = "../Projects/Default";
     QDir direct;
@@ -69,6 +72,7 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
+//Updates volume sliders
 void MainWindow::sliderEvent(){
     for(int i = 0; i < currentPlaybacks.size(); i++){
         currentPlaybacks[i]->audioOutput()->setVolume(tracks[i]->volume->value()/100.0);
@@ -95,7 +99,7 @@ void MainWindow::addTrack(){
     QObject::connect(addT->recordTrack, SIGNAL(clicked()), this, SLOT(recordTrack()));
     QObject::connect(addT->playTrack, SIGNAL(clicked()), this, SLOT(playTrack()));
     QObject::connect(addT->mute, SIGNAL(clicked()), this, SLOT(muteTrack()));
-    //Add mute connect here
+
     sync();
 }
 
@@ -237,20 +241,34 @@ void MainWindow::stopAll(){
 }
 
 void MainWindow::recordTrack() {
-    recording = true;
     ui->addTrack->hide();
     stopAll();
     QPushButton *buttonSender = qobject_cast<QPushButton *>(sender());
+
+    //There is additional latency when first calling the record after executing the program. This
+    //Calls and closes the recording GUI once without the user seeing it so that there is no additional
+    //latency for the user.
     if(firstCalled){
-        AudioRecorder *newAudioRecorder = new AudioRecorder(buttonSender, this);
+        AudioRecorder *newAudioRecorder = new AudioRecorder(buttonSender, this, 0);
         emit initializeRec();
         firstCalled = false;
         delete newAudioRecorder;
     }
+
     int trackNumber = buttonSender->property("trackNumber").toInt();
     buttonSender->setProperty("project", QString::fromStdString(currentProject));
+    int latencyCor = ui->latencyCorrection->text().toInt();
+    int pos;
+    int neg;
+    if(latencyCor < 0){
+        neg = abs(latencyCor);
+        pos = 0;
+    }else{
+        neg = 0;
+        pos = latencyCor;
+    }
 
-    AudioRecorder *newAudioRecorder = new AudioRecorder(buttonSender, this);
+    AudioRecorder *newAudioRecorder = new AudioRecorder(buttonSender, this, neg);
     fclose(trackFiles[trackNumber]->file);
     remove(trackFiles[trackNumber]->fileName.c_str());
     newAudioRecorder->setWindowModality(Qt::ApplicationModal);
@@ -261,7 +279,7 @@ void MainWindow::recordTrack() {
 
     emit recordingTime();
 
-    QThread::msleep(625);
+    QThread::msleep(pos);
     loop.exec();
     delete newAudioRecorder;
     sync();
@@ -270,8 +288,6 @@ void MainWindow::recordTrack() {
         tracks[i]->playTrack->setText("Play");
     }
     ui->addTrack->show();
-    recording = false;
-
 }
 
 //Clear and then repopulate the trackFiles and tracks vectors and change the current project.
@@ -388,7 +404,8 @@ void MainWindow::quit() {
 
 void MainWindow::onRecordingFinished() {
     // This slot will be called when the recordingFinished() signal is emitted.
-    // You can put any code here that needs to be executed when the recording is finished.
+    // You can put any code here that needs to be executed when the recording is finished, but currently
+    //that is not needed.
 }
 
 

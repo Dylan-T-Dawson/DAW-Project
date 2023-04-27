@@ -26,7 +26,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_AudioRecorder_t {
-    uint offsetsAndSizes[40];
+    uint offsetsAndSizes[42];
     char stringdata0[14];
     char stringdata1[18];
     char stringdata2[1];
@@ -46,7 +46,8 @@ struct qt_meta_stringdata_AudioRecorder_t {
     char stringdata16[20];
     char stringdata17[14];
     char stringdata18[12];
-    char stringdata19[14];
+    char stringdata19[15];
+    char stringdata20[14];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_AudioRecorder_t::offsetsAndSizes) + ofs), len 
@@ -71,7 +72,8 @@ Q_CONSTINIT static const qt_meta_stringdata_AudioRecorder_t qt_meta_stringdata_A
         QT_MOC_LITERAL(206, 19),  // "displayErrorMessage"
         QT_MOC_LITERAL(226, 13),  // "receivedStart"
         QT_MOC_LITERAL(240, 11),  // "initialized"
-        QT_MOC_LITERAL(252, 13)   // "updateFormats"
+        QT_MOC_LITERAL(252, 14),  // "startRecording"
+        QT_MOC_LITERAL(267, 13)   // "updateFormats"
     },
     "AudioRecorder",
     "recordingFinished",
@@ -92,6 +94,7 @@ Q_CONSTINIT static const qt_meta_stringdata_AudioRecorder_t qt_meta_stringdata_A
     "displayErrorMessage",
     "receivedStart",
     "initialized",
+    "startRecording",
     "updateFormats"
 };
 #undef QT_MOC_LITERAL
@@ -103,7 +106,7 @@ Q_CONSTINIT static const uint qt_meta_data_AudioRecorder[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -111,21 +114,22 @@ Q_CONSTINIT static const uint qt_meta_data_AudioRecorder[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   92,    2, 0x06,    1 /* Public */,
-       3,    0,   93,    2, 0x06,    2 /* Public */,
+       1,    0,   98,    2, 0x06,    1 /* Public */,
+       3,    0,   99,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    1,   94,    2, 0x0a,    3 /* Public */,
-       6,    0,   97,    2, 0x08,    5 /* Private */,
-       7,    0,   98,    2, 0x08,    6 /* Private */,
-       8,    0,   99,    2, 0x08,    7 /* Private */,
-       9,    1,  100,    2, 0x08,    8 /* Private */,
-      12,    1,  103,    2, 0x08,   10 /* Private */,
-      14,    1,  106,    2, 0x08,   12 /* Private */,
-      16,    0,  109,    2, 0x08,   14 /* Private */,
-      17,    0,  110,    2, 0x08,   15 /* Private */,
-      18,    0,  111,    2, 0x08,   16 /* Private */,
-      19,    0,  112,    2, 0x08,   17 /* Private */,
+       4,    1,  100,    2, 0x0a,    3 /* Public */,
+       6,    0,  103,    2, 0x08,    5 /* Private */,
+       7,    0,  104,    2, 0x08,    6 /* Private */,
+       8,    0,  105,    2, 0x08,    7 /* Private */,
+       9,    1,  106,    2, 0x08,    8 /* Private */,
+      12,    1,  109,    2, 0x08,   10 /* Private */,
+      14,    1,  112,    2, 0x08,   12 /* Private */,
+      16,    0,  115,    2, 0x08,   14 /* Private */,
+      17,    0,  116,    2, 0x08,   15 /* Private */,
+      18,    0,  117,    2, 0x08,   16 /* Private */,
+      19,    0,  118,    2, 0x08,   17 /* Private */,
+      20,    0,  119,    2, 0x08,   18 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -139,6 +143,7 @@ Q_CONSTINIT static const uint qt_meta_data_AudioRecorder[] = {
     QMetaType::Void, 0x80000000 | 10,   11,
     QMetaType::Void, 0x80000000 | 13,    2,
     QMetaType::Void, QMetaType::LongLong,   15,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -184,6 +189,8 @@ Q_CONSTINIT const QMetaObject AudioRecorder::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'initialized'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'startRecording'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'updateFormats'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -208,7 +215,8 @@ void AudioRecorder::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 9: _t->displayErrorMessage(); break;
         case 10: _t->receivedStart(); break;
         case 11: _t->initialized(); break;
-        case 12: _t->updateFormats(); break;
+        case 12: _t->startRecording(); break;
+        case 13: _t->updateFormats(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -249,13 +257,13 @@ int AudioRecorder::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

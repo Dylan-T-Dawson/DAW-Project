@@ -22,7 +22,7 @@
 
 #include "TrackFIle.h"
 #include "TrackGUI.h"
-#include "QLRClickButton.h"
+
 #include "audiorecorder.h"
 
 #define maxTrack 8
@@ -74,10 +74,11 @@ private:
 
     std::vector<TrackGUI*> tracks; //Holds instances of the TrackGUI class to represent tracks
     std::vector<TrackFile*> trackFiles; //Holds instances of the trackFile class to represent files tied to tracks
+
     QTimer* timer;
     std::vector<QMediaPlayer*> currentPlaybacks;
     bool firstCalled = true;
-    bool recording = false;
+
 };
 
 #endif // MAINWINDOW_H

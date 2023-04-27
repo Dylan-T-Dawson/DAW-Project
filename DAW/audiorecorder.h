@@ -23,7 +23,7 @@ class AudioRecorder : public QMainWindow
     Q_OBJECT
 
 public:
-    AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin);
+    AudioRecorder(QPushButton *buttonSender, QMainWindow* parentWin, int negLatency);
     bool playing = false;
 signals:
     void recordingFinished();
@@ -43,12 +43,14 @@ private slots:
     void displayErrorMessage();
     void receivedStart();
     void initialized();
+    void startRecording();
     void updateFormats();
 
 private:
+
     void clearAudioLevels();
     QMediaFormat selectedMediaFormat() const;
-
+    int negativeLatency;
     Ui::AudioRecorder *ui = nullptr;
     int trackNumber;
     QString project;
@@ -59,6 +61,7 @@ private:
     bool m_updatingFormats = false;
     QPushButton* m_trackTarget;
     bool clearing = false;
+
 
 };
 

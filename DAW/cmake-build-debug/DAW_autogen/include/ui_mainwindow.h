@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -34,6 +35,8 @@ public:
     QPushButton *deleteProjectButton;
     QPushButton *playButton;
     QPushButton *stopPlay;
+    QLabel *label;
+    QLineEdit *latencyCorrection;
     QSpacerItem *horizontalSpacer;
     QLabel *projectNameLabel;
     QWidget *verticalLayoutWidget;
@@ -101,6 +104,23 @@ public:
 
         functionBar->addWidget(stopPlay);
 
+        label = new QLabel(horizontalLayoutWidget);
+        label->setObjectName("label");
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy2);
+
+        functionBar->addWidget(label);
+
+        latencyCorrection = new QLineEdit(horizontalLayoutWidget);
+        latencyCorrection->setObjectName("latencyCorrection");
+        sizePolicy1.setHeightForWidth(latencyCorrection->sizePolicy().hasHeightForWidth());
+        latencyCorrection->setSizePolicy(sizePolicy1);
+
+        functionBar->addWidget(latencyCorrection);
+
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
 
         functionBar->addItem(horizontalSpacer);
@@ -121,11 +141,11 @@ public:
         verticalLayout->setContentsMargins(0, 14, 0, 0);
         addTrack = new QPushButton(verticalLayoutWidget);
         addTrack->setObjectName("addTrack");
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(addTrack->sizePolicy().hasHeightForWidth());
-        addTrack->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(addTrack->sizePolicy().hasHeightForWidth());
+        addTrack->setSizePolicy(sizePolicy3);
         addTrack->setMinimumSize(QSize(40, 30));
         addTrack->setMaximumSize(QSize(150, 30));
 
@@ -163,6 +183,7 @@ public:
         deleteProjectButton->setText(QCoreApplication::translate("MainWindow", "Delete Project", nullptr));
         playButton->setText(QCoreApplication::translate("MainWindow", "Play All", nullptr));
         stopPlay->setText(QCoreApplication::translate("MainWindow", "Stop Playback", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Latency Corection (ms): ", nullptr));
         projectNameLabel->setText(QCoreApplication::translate("MainWindow", "Project: Project1", nullptr));
         addTrack->setText(QCoreApplication::translate("MainWindow", "Add Track", nullptr));
         tracksLabel->setText(QCoreApplication::translate("MainWindow", "Tracks", nullptr));
